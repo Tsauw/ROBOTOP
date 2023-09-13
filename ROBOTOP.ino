@@ -8,7 +8,7 @@ int in3 = 5;
 int in4 = 4;
 
 void setup() {
-	
+
 	pinMode(enA, OUTPUT);
 	pinMode(enB, OUTPUT);
 	pinMode(in1, OUTPUT);
@@ -21,6 +21,11 @@ void setup() {
 	digitalWrite(in2, LOW);
 	digitalWrite(in3, LOW);
 	digitalWrite(in4, LOW);
+}
+void loop() {
+	directionControl();
+	delay(1000);
+
 }
 void directionControl() {
 	
@@ -35,42 +40,9 @@ void directionControl() {
 	delay(2000);
 	
 
-	digitalWrite(in1, LOW);
-	digitalWrite(in2, HIGH);
-	digitalWrite(in3, LOW);
-	digitalWrite(in4, HIGH);
-	delay(2000);
-	
-
-	digitalWrite(in1, LOW);
+	digitalWrite(in1, HIGH);
 	digitalWrite(in2, LOW);
 	digitalWrite(in3, LOW);
 	digitalWrite(in4, LOW);
 }
-void speedControl() {
-	
-	digitalWrite(in1, LOW);
-	digitalWrite(in2, HIGH);
-	digitalWrite(in3, LOW);
-	digitalWrite(in4, HIGH);
-	
-	
-	for (int i = 0; i < 256; i++) {
-		analogWrite(enA, i);
-		analogWrite(enB, i);
-		delay(20);
-	}
-	
-	
-	for (int i = 255; i >= 0; --i) {
-		analogWrite(enA, i);
-		analogWrite(enB, i);
-		delay(20);
-	}
-	
 
-	digitalWrite(in1, LOW);
-	digitalWrite(in2, LOW);
-	digitalWrite(in3, LOW);
-	digitalWrite(in4, LOW);
-}
