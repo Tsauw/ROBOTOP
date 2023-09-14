@@ -24,13 +24,13 @@ void setup() {
 }
 void loop() {
 	directionControl();
-	delay(1000);
+	delay(900);
 
 }
 void directionControl() {
 	
-	analogWrite(enA, 255);
-	analogWrite(enB, 255);
+	analogWrite(enA, 100);
+	analogWrite(enB, 100);
 
 
 	digitalWrite(in1, HIGH);
@@ -39,10 +39,11 @@ void directionControl() {
 	digitalWrite(in4, LOW);
 	delay(2000);
 	
+  analogWrite(enA, 200);
+	analogWrite(enB, 200);
 
 	digitalWrite(in1, HIGH);
 	digitalWrite(in2, LOW);
 	digitalWrite(in3, LOW);
-	digitalWrite(in4, LOW);
+	digitalWrite(in4, HIGH);
 }
-
