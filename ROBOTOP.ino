@@ -37,8 +37,8 @@ void directionControl() {
 	digitalWrite(in2, LOW);
 	digitalWrite(in3, HIGH);
 	digitalWrite(in4, LOW);
-	delay(2000);
-	
+	delay(5000);
+	//GIRAR A LA DERECHA 
   analogWrite(enA, 200);
 	analogWrite(enB, 200);
 
